@@ -6,11 +6,6 @@ const WORDS = [
   "github","cloud","server","variable","object","class","array","string","boolean",
   "digital","system","application","framework","responsive","animation","developer",
   "design","mobile","laptop","tablet","interface","robot","cyber","data","model","neural",
-  "Algorithm", "Variable", "Function", "Database", "Network", "Compiler", "Programming", 
-  "Software", "Hardware", "Operating System", "Machine Learning", "Artificial Intelligence",
-   "Data Structure", "Class", "Object", "Inheritance", "Polymorphism", "Encapsulation", 
-   "Abstraction", "Interface", "Method", "Array", "String", "Loop", "Condition",
-    "Algorithm", "Dataset", "Model", "Training", "Prediction"
 ];
 
 const LEVELS = {
