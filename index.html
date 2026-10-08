@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#02040c">
+  <title>TYPE BLAST — Speed Typing Shooter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="stars"></div>
+  <div id="stars2"></div>
+
+  <main class="app">
+    <header class="hud">
+      <div class="brand">⚡ TYPE <span>BLAST</span></div>
+      <div class="hud-item"><small>SCORE</small><b id="score">0</b></div>
+      <div class="hud-item"><small>WPM</small><b id="wpm">0</b></div>
+      <div class="hud-item"><small>ACCURACY</small><b id="accuracy">100%</b></div>
+      <div class="hud-item combo"><small>COMBO</small><b id="combo">x0</b></div>
+      <div class="hud-item"><small>TARGET</small><b id="progress">0/25</b></div>
+      <div class="hud-item timer"><small>TIME</small><b id="timer">03:00</b></div>
+      <div class="hud-item lives"><small>SHIELD</small><b id="lives">♥♥♥</b></div>
+    </header>
+
+    <section id="game">
+      <div class="scanline"></div>
+
+      <div class="level-menu" id="levelMenu">
+        <div class="menu-logo">TYPE <span>BLAST</span></div>
+        <p class="menu-subtitle">Choose your mission. Destroy the words before time runs out.</p>
+
+        <div class="levels">
+          <button class="level-card selected" data-level="1">
+            <span class="level-number">01</span>
+            <strong>CADET</strong>
+            <small>25 WORDS • 3 MIN</small>
+            <em>Slow speed</em>
+          </button>
+          <button class="level-card" data-level="2">
+            <span class="level-number">02</span>
+            <strong>HUNTER</strong>
+            <small>35 WORDS • 3 MIN</small>
+            <em>Medium speed</em>
+          </button>
+          <button class="level-card" data-level="3">
+            <span class="level-number">03</span>
+            <strong>ACE</strong>
+            <small>45 WORDS • 3 MIN</small>
+            <em>High speed</em>
+          </button>
+        </div>
+
+        <button id="startBtn" class="start-btn">START LEVEL 1</button>
+        <div class="keys">⌨ TYPE FAST • 🎯 HIT TARGETS • 🔥 BUILD COMBOS • 🚀 SURVIVE</div>
+      </div>
+
+      <div id="playArea"></div>
+
+      <div class="center-laser"></div>
+      <div class="ship" aria-label="player ship">
+        <img src="assets/player_rocket.png" alt="Player spaceship">
+        <div class="engine-glow"></div>
+      </div>
+
+      <div id="typedDisplay" class="typed-display"></div>
+      <div id="flash"></div>
+      <div id="toast"></div>
+
+      <div class="input-wrap">
+        <input id="wordInput" autocomplete="off" autocapitalize="off" spellcheck="false"
+          placeholder="TYPE THE TARGET WORD..." disabled>
+      </div>
+
+      <div id="resultOverlay" class="overlay hidden">
+        <div class="panel">
+          <div id="resultTitle" class="gameover-title">MISSION COMPLETE</div>
+          <div id="resultMessage" class="result-message">Target destroyed.</div>
+          <div class="final-score" id="finalScore">0</div>
+          <div class="final-grid">
+            <div><small>WPM</small><b id="finalWpm">0</b></div>
+            <div><small>ACCURACY</small><b id="finalAccuracy">0%</b></div>
+            <div><small>BEST COMBO</small><b id="finalCombo">0</b></div>
+          </div>
+          <div class="result-buttons">
+            <button id="nextBtn">NEXT LEVEL</button>
+            <button id="menuBtn" class="secondary-btn">LEVEL MENU</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>TYPE BLAST v2.0</span>
+      <span>Responsive Browser Mini Project • No Database Required</span>
+    </footer>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
